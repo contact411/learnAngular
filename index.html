@@ -6,8 +6,19 @@
   <link rel="stylesheet" type="text/javascript" href="bootstrap.min.css" />
 </head>
 <body>
+  <div ng-controller="StoreController as store">
+    <h1> {{store.product.name}} </h1>
+    <h2>
+      <em class="pull-right">
+        ${{store.product.price}}
+      </em>
+    </h2>
+    <p>
+      {{store.product.description}}
+    </p>
+    <button ng-show="store.product.canPurchase"> Add to Cart </button>
+  </div>
   <script type="text/javascript" src="angular.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
-  <p>{{"hello" + " you"}}</p>
 </body>
 </html>
